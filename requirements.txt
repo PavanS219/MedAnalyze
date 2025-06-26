@@ -1,24 +1,19 @@
+# Minimal requirements - add others gradually
 streamlit
 qdrant-client
-llama-index
-llama-index-core
-llama-index-vector-stores-qdrant
-llama-index-embeddings-huggingface
-llama-index-llms-mistralai
-llama-index-postprocessor-sentence-transformer-rerank
-opencv-python
-numpy
 requests
-easyocr
-pathlib
-tempfile
-json
-datetime
-os
-traceback
-llama-index
-llama-index-vector-stores-qdrant
-llama-index-embeddings-huggingface
-llama-index-llms-mistralai
-llama-index-readers-file
-sentence-transformers
+numpy
+pandas
+Pillow
+
+# Add these one by one if the above works:
+# llama-index
+# llama-index-core
+# llama-index-vector-stores-qdrant
+# llama-index-embeddings-huggingface
+# llama-index-llms-mistralai
+# opencv-python-headless
+# easyocr
+# sentence-transformers
+# torch
+# transformers
