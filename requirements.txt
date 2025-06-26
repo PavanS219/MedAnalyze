@@ -7,13 +7,13 @@ pandas
 Pillow
 
 # Add these one by one if the above works:
-# llama-index
-# llama-index-core
-# llama-index-vector-stores-qdrant
-# llama-index-embeddings-huggingface
-# llama-index-llms-mistralai
-# opencv-python-headless
-# easyocr
-# sentence-transformers
-# torch
-# transformers
+llama-index
+llama-index-core
+llama-index-vector-stores-qdrant
+llama-index-embeddings-huggingface
+llama-index-llms-mistralai
+opencv-python-headless
+easyocr
+sentence-transformers
+torch
+transformers
