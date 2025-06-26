@@ -16,3 +16,9 @@ json
 datetime
 os
 traceback
+llama-index
+llama-index-vector-stores-qdrant
+llama-index-embeddings-huggingface
+llama-index-llms-mistralai
+llama-index-readers-file
+sentence-transformers
