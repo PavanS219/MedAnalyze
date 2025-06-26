@@ -17,3 +17,5 @@ easyocr
 sentence-transformers
 torch
 transformers
+llama-index-readers-file
+pymupdf
