@@ -118,7 +118,7 @@ class MedicalReportOCR:
     def _test_ollama_connection(self):
         """Test Ollama connection and model availability with timeout"""
         try:
-            response = requests.get(f"{self.ollama_url}/api/tags", timeout=10)
+            response = requests.get(f"{self.ollama_url}/api/generate", timeout=10)
             if response.status_code == 200:
                 models_data = response.json()
                 available_models = [model['name'] for model in models_data.get('models', [])]
