@@ -120,6 +120,11 @@ class MedicalReportOCR:
     def _test_ollama_connection(self):
         """Test Ollama connection and model availability with timeout"""
         try:
+            headers = {
+            'ngrok-skip-browser-warning': 'true',
+            'User-Agent': 'MediExtract/1.0'
+            'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
+            }
             response = requests.post(f"{self.ollama_url}/api/generate", timeout=10)
             if response.status_code == 200:
                 models_data = response.json()
@@ -853,6 +858,12 @@ def main():
             # Ollama status check
             ollama_status = st.empty()
             try:
+                headers = {
+                    'ngrok-skip-browser-warning': 'true',
+                    'User-Agent': 'MediExtract/1.0',
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
+                }
                 response = requests.post("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/generate", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
