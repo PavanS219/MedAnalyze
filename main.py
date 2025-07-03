@@ -93,7 +93,7 @@ st.markdown("""
 # ================================
 
 class MedicalReportOCR:
-    def __init__(self, ollama_url="https://feae-2401-4900-1cb2-f8d9-a050-d2d5-65cb-3967.ngrok-free.app", model_name="llama3.2:1b"):
+    def __init__(self, ollama_url="https://e50b-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app", model_name="llama3.2:1b"):
         self.ollama_url = ollama_url
         self.model_name = model_name
         self.ocr_reader = None
