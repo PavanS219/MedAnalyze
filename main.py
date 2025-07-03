@@ -853,7 +853,7 @@ def main():
             # Ollama status check
             ollama_status = st.empty()
             try:
-                response = requests.post(f"{ollama_url}/api/generate", timeout=5)
+                response = requests.get(f"{ollama_url}/api/tags", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
                 else:
