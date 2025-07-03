@@ -821,7 +821,7 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>🏥 Medical Report Analytics System</h1>
+        <h1>🏥 MediExtract</h1>
         <p style="font-size: 1.2em; margin-top: 10px;">AI-Powered Medical Report Processing & Analysis</p>
         <p style="opacity: 0.9;">Upload medical reports → Extract data → Ask intelligent questions!</p>
     </div>
