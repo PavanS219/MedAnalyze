@@ -125,7 +125,7 @@ class MedicalReportOCR:
             'User-Agent': 'MediExtract/1.0',
             'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
             }
-            response = requests.post(f"{self.ollama_url}/api/generate", timeout=10)
+            response = requests.get(f"{self.ollama_url}/api/tags", timeout=10)
             if response.status_code == 200:
                 models_data = response.json()
                 available_models = [model['name'] for model in models_data.get('models', [])]
