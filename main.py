@@ -122,7 +122,7 @@ class MedicalReportOCR:
         try:
             headers = {
             'ngrok-skip-browser-warning': 'true',
-            'User-Agent': 'MediExtract/1.0'
+            'User-Agent': 'MediExtract/1.0',
             'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
             }
             response = requests.post(f"{self.ollama_url}/api/generate", timeout=10)
