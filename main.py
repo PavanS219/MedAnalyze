@@ -853,7 +853,7 @@ def main():
             # Ollama status check
             ollama_status = st.empty()
             try:
-                response = requests.post("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/tags", timeout=5)
+                response = requests.post("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/generate", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
                 else:
