@@ -24,6 +24,8 @@ from PIL import Image
 import io
 import time
 
+OLLAMA_URL = "https://e50b-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app"
+MODEL_NAME = "llama3.2:1b"
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -851,7 +853,7 @@ def main():
             # Ollama status check
             ollama_status = st.empty()
             try:
-                response = requests.get(f"{ollama_url}/api/generate", timeout=5)
+                response = requests.get(f"{OLLAMA_URL}/api/generate", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
                 else:
