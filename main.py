@@ -864,7 +864,7 @@ def main():
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
                 }
-                response = requests.post("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/generate", timeout=5)
+                response = requests.get("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/tags", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
                 else:
