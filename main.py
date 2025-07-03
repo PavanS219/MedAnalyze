@@ -24,7 +24,7 @@ from PIL import Image
 import io
 import time
 
-ollama_url = "https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app"
+ollama_url = "https://c9ba-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app"
 model_name = "llama3.2:1b"
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -95,7 +95,7 @@ st.markdown("""
 # ================================
 
 class MedicalReportOCR:
-    def __init__(self, ollama_url="https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app", model_name="llama3.2:1b"):
+    def __init__(self, ollama_url="https://c9ba-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app", model_name="llama3.2:1b"):
         self.ollama_url = ollama_url
         self.model_name = model_name
         self.ocr_reader = None
@@ -120,11 +120,6 @@ class MedicalReportOCR:
     def _test_ollama_connection(self):
         """Test Ollama connection and model availability with timeout"""
         try:
-            headers = {
-            'ngrok-skip-browser-warning': 'true',
-            'User-Agent': 'MediExtract/1.0',
-            'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
-            }
             response = requests.get(f"{self.ollama_url}/api/tags", timeout=10)
             if response.status_code == 200:
                 models_data = response.json()
@@ -858,13 +853,7 @@ def main():
             # Ollama status check
             ollama_status = st.empty()
             try:
-                headers = {
-                    'ngrok-skip-browser-warning': 'true',
-                    'User-Agent': 'MediExtract/1.0',
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer 2zNE4nG5vELPXq3uAvjZ77nbUTw_5XwAg4PH5qMPiDabb5R6W'
-                }
-                response = requests.get("https://2cd8-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/tags", timeout=5)
+                response = requests.get("https://c9ba-2401-4900-1cb2-f8d9-21b0-76f7-d944-8855.ngrok-free.app/api/tags", timeout=5)
                 if response.status_code == 200:
                     ollama_status.success("🤖 Ollama: Connected")
                 else:
